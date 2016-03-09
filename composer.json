@@ -1,7 +1,6 @@
 {
-  "name": "simpleenergy/php-webhdfs",
+  "name": "tipuban/php-webhdfs",
   "description": "PHP WebHDFS, forked from https://github.com/simpleenergy/php-WebHDFS",
-  "minimum-stability": "stable",
   "license": "unknown",
   "version": "1.0.3",
   "authors": [
