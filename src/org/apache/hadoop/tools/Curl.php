@@ -43,12 +43,15 @@ class Curl {
 		return null;
 	}
 
-	public function putFile($url, $filename) {
+	public function putFile($url, $filename, $contentType = 'application/octet-stream') {
 		$options[CURLOPT_URL] = $url;
 		$options[CURLOPT_PUT] = true;
 		$handle = fopen($filename, "r");
 		$options[CURLOPT_INFILE] = $handle;
 		$options[CURLOPT_INFILESIZE] = filesize($filename);
+		$options[CURLOPT_HTTPHEADER] = array(
+			'Content-Type: ' . $contentType
+		);
 
 		$info = $this->_exec($options, true);
 
